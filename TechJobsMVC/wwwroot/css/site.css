@@ -176,6 +176,23 @@ table.job-listing {
         width: 80%;
     }
 
+
+table.short-listing {
+    margin: 30px auto;
+    border: 1px solid #e4e4e4;
+    width: 40%;
+    text-align: center;
+}
+
+    table.short-listing td:first-child {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    table.short-listing td:last-child {
+        text-align: center;
+    }
+
 label {
     margin-right: 15px;
 }
