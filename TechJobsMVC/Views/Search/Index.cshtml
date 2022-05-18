@@ -1,4 +1,5 @@
-﻿<div class="container body-content">
+﻿
+<div class="container body-content">
 
     <h1>@ViewBag.title</h1>
 
@@ -25,9 +26,50 @@
     </form>
 
     <hr />
-
-    @{
-        //TODO #4: Loop over the search results to display all job fields.
-    }
-
 </div>
+
+
+
+@{
+    //TODO #4: Loop over the search results to display all job fields.
+}
+
+
+@if (ViewBag.jobs.Count > 0)
+{
+    <div class="container body-content">
+
+        <h1>@ViewBag.title</h1>
+        <h2>Results: @ViewBag.jobs.Count</h2>
+
+        @foreach (var job in ViewBag.jobs)
+        {
+            <table class="short-listing">
+                <tr>
+                    <td>ID </td>
+                    <td>@job.Id</td>
+                </tr>
+                <tr>
+                    <td>Name </td>
+                    <td>Name @job.Name</td>
+                </tr>
+                <tr>
+                    <td>Employer </td>
+                    <td>Employer @job.Employer</td>
+                </tr>
+                <tr>
+                    <td>Location </td>
+                    <td>Location @job.Location</td>
+                </tr>
+                <tr>
+                    <td>Position Type </td>
+                    <td>Position Type @job.PositionType</td>
+                </tr>
+                <tr>
+                    <td>Skill </td>
+                    <td>Skill @job.CoreCompetency</td>
+                </tr>
+            </table><br>
+        }
+    </div>
+} 
